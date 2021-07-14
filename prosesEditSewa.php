@@ -10,10 +10,13 @@
 
     $tanggal_sewa = date('Y-m-d');
 
-    $query = mysqli_query($connect, "UPDATE sewa SET judul = '$judul',
-                                            nama = '$penyewa',
-                                            durasi = '$durasi'
-                                            WHERE id='$id'");
-   
-
-    header('location:index.php');
+    $query = mysqli_query($connect, "UPDATE sewa SET judul = '$judul', nama = '$penyewa', durasi = '$durasi' WHERE id = '$id'");
+    
+    if(isset($_POST['sewa'])) {
+        if(empty($query)) 
+        {
+            header('location:formEditSewa.php');
+        } else {
+            header('location:index.php');
+        }
+    }

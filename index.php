@@ -1,6 +1,8 @@
 <?php 
     
     include_once 'koneksi.php';
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +43,12 @@
                 echo "<td>$row[tanggal_sewa]</td>";
                 echo "<td>$tanggal_selesai</td>";
                 echo "<td>$row[durasi]<td>";
-                echo "<td> &nbsp; </td>";
+                echo "<td><a href='formEditSewa.php?id=$row[id]'>Edit</a>";
+                
 
 
                 $no++;
-                echo "<td><a href='formEditSewa.php'>Edit</a></td>";
+            
             }
 
         ?>

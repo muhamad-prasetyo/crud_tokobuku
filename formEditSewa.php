@@ -7,7 +7,7 @@
 
     $row = mysqli_fetch_array($query);
 
-    var_dump($row);
+    
 ?>
 
 <!DOCTYPE html>
@@ -16,11 +16,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Sewa</title>
+    <title>Form Edit Sewa</title>
 </head>
 <body>
     <form action="prosesEditSewa.php?id=<?= $row['id']; ?>" method="POST">
-        
         <label for="judul">Judul Buku</label>
         <input type="text" name="judul" value="<?= $row['judul']; ?>">
 
@@ -32,7 +31,7 @@
 
         <br><br>
         <div>
-            <input type="submit" name="sewa" value="Sewa Buku">
+            <input type="submit" name="sewa" value="sewa">
         </div>
     </form>
 </body>
