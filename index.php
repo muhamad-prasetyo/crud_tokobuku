@@ -43,7 +43,8 @@
                 echo "<td>$row[tanggal_sewa]</td>";
                 echo "<td>$tanggal_selesai</td>";
                 echo "<td>$row[durasi]<td>";
-                echo "<td><a href='formEditSewa.php?id=$row[id]'>Edit</a>";
+                echo "<td><a href='formEditSewa.php?id=$row[id]'>Edit</a>
+                        <a href='prosesDeleteSewa.php?id=$row[id]'>Delete</a></td>";
                 
 
 
