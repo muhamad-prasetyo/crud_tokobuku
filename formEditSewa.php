@@ -1,5 +1,13 @@
 <?php 
     include_once 'koneksi.php';
+
+    $id = $_GET['id'];
+
+    $query = mysqli_query($connect, "SELECT * FROM sewa WHERE id='$id'");
+
+    $row = mysqli_fetch_array($query);
+
+    var_dump($row);
 ?>
 
 <!DOCTYPE html>
@@ -11,15 +19,16 @@
     <title>Form Sewa</title>
 </head>
 <body>
-    <form action="prosesSewa.php" method="POST">
+    <form action="prosesEditSewa.php?id=<?= $row['id']; ?>" method="POST">
+        
         <label for="judul">Judul Buku</label>
-        <input type="text" name="judul">
+        <input type="text" name="judul" value="<?= $row['judul']; ?>">
 
         <label for="nama">Nama Penyewa</label>
-        <input type="text" name="nama">
+        <input type="text" name="nama" value="<?= $row['nama']; ?>">
 
         <label for="durasi">Durasi Sewa</label>
-        <input type="text" name="durasi">
+        <input type="text" name="durasi" value="<?= $row['durasi']; ?>">
 
         <br><br>
         <div>

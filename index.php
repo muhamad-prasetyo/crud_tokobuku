@@ -12,6 +12,9 @@
     <title>Read Sewa</title>
 </head>
 <body>
+    <div>
+        <a href="formSewa.php">Tambah Data</a>
+    </div>
     <table border="1px">
         <tr>
             <th>No</th>
@@ -40,11 +43,13 @@
                 echo "<td>$row[durasi]<td>";
                 echo "<td> &nbsp; </td>";
 
-                
 
                 $no++;
+                echo "<td><a href='formEditSewa.php'>Edit</a></td>";
             }
+
         ?>
+
     </table>
 </body>
 </html>

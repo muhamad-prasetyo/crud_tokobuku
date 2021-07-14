@@ -8,3 +8,5 @@
     $tanggal_sewa = date('Y-m-d');
 
     mysqli_query($connect, "INSERT INTO sewa(judul,nama,durasi,tanggal_sewa) VALUES ('$judul', '$nama', '$durasi', '$tanggal_sewa')");
+
+    header('Location:index.php');
